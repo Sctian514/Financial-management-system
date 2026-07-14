@@ -1,0 +1,44 @@
+<IfModule authz_core_module>
+	Require all denied
+</IfModule>
+<IfModule !authz_core_module>
+	Deny from all
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	# Redirect HTTP to HTTPS (Opsional, jika HTTPS diperlukan)
+	RewriteCond %{HTTPS} off
+	RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+	# Redirect www ke non-www (Opsional)
+	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+	RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+	# Hapus "index.php" dari URL
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php/$1 [L]
+
+	# Opsi untuk menyembunyikan direktori public jika digunakan
+	# Jika CodeIgniter berada di dalam folder public, Anda dapat menambahkan:
+	# RewriteRule ^(.*)$ public/index.php/$1 [L]
+</IfModule>
+
+# Blokir akses ke file berbahaya
+<Files .*>
+	Order Deny,Allow
+	Deny from all
+</Files>
+
+<FilesMatch "\.(env|json|config|lock|gitignore|gitattributes|log|sh|bak|sql)$">
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
+
+# Aktifkan Gzip Compression (Opsional)
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+	application/json application/xml
+</IfModule>
