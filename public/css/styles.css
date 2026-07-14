@@ -1,0 +1,54 @@
+body {
+  background-color: #121212;
+  color: #E0E0E0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-attachment: fixed;
+
+}
+
+.card {
+  background-color: #1F1B24;
+  border: none;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.btn-primary {
+  background-color: #2979FF;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #1E88E5;
+}
+.form-control {
+  background-color: #1F1B24;
+  color: #E0E0E0;
+  border: 1px solid #B0BEC5;
+}
+.form-control:focus {
+  background-color: #1F1B24;
+  color: #E0E0E0;
+  border-color: #2979FF;
+  box-shadow: none;
+}
+.form-check-input:checked {
+  background-color: #2979FF;
+  border-color: #2979FF;
+}
+.text-muted {
+  color: #B0BEC5 !important;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2979FF;
+}
