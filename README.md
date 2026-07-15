@@ -1,68 +1,237 @@
-# CodeIgniter 4 Application Starter
+# 💰 Financial Management System
 
-## What is CodeIgniter?
+> A web-based Financial Management System developed during my internship to simplify financial recording, budget management, and reporting processes.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php)
+![CodeIgniter](https://img.shields.io/badge/CodeIgniter-4-EF4223?style=for-the-badge&logo=codeigniter)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+---
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## 📌 Overview
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Financial Management System is a web-based application designed to assist in managing financial records efficiently. The system provides features for recording transactions, organizing financial data, managing users, and generating reports through an intuitive dashboard.
 
-## Installation & updates
+This project was developed during my internship as a practical implementation of web application development using the MVC architecture provided by CodeIgniter 4.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+---
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+## ✨ Features
 
-## Setup
+- 🔐 User Authentication
+- 👥 User Management
+- 💰 Financial Transaction Recording
+- 📊 Dashboard Overview
+- 📑 Financial Reports
+- 📅 Transaction History
+- 🔍 Search & Filter Data
+- 📈 Budget Monitoring
+- 📱 Responsive User Interface
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+---
 
-## Important Change with index.php
+## 🛠 Tech Stack
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+| Technology | Description |
+|------------|-------------|
+| PHP | Backend Programming Language |
+| CodeIgniter 4 | PHP Framework |
+| MySQL | Database |
+| Bootstrap 5 | Frontend Framework |
+| JavaScript | Client-side Interaction |
+| HTML5 & CSS3 | User Interface |
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+---
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## 📂 Project Structure
 
-## Repository Management
+```text
+Financial-management-system/
+│
+├── app/
+├── public/
+├── writable/
+├── tests/
+├── vendor/
+├── .env
+├── composer.json
+├── spark
+└── README.md
+```
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+---
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## 📸 Screenshots
 
-## Server Requirements
+### Login Page
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+> *(Add screenshot here)*
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+```
+docs/login.png
+```
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+---
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+### Dashboard
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+> *(Add screenshot here)*
+
+```
+docs/dashboard.png
+```
+
+---
+
+### Financial Records
+
+> *(Add screenshot here)*
+
+```
+docs/transaction.png
+```
+
+---
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Financial-management-system.git
+```
+
+### Go to Project Folder
+
+```bash
+cd Financial-management-system
+```
+
+### Install Dependencies
+
+```bash
+composer install
+```
+
+### Create Environment File
+
+```bash
+cp env .env
+```
+
+Edit:
+
+```
+app.baseURL = 'http://localhost:8080'
+```
+
+Configure database:
+
+```
+database.default.hostname = localhost
+database.default.database = your_database
+database.default.username = root
+database.default.password =
+database.default.DBDriver = MySQLi
+```
+
+---
+
+## ▶️ Run Project
+
+```bash
+php spark serve
+```
+
+Open:
+
+```
+http://localhost:8080
+```
+
+---
+
+## 🗄 Database
+
+Import the provided SQL file into MySQL.
+
+```
+database.sql
+```
+
+Then update the database configuration inside:
+
+```
+app/Config/Database.php
+```
+
+---
+
+## 📊 Application Modules
+
+- Authentication
+- Dashboard
+- Financial Recording
+- Budget Management
+- Report Management
+- User Management
+
+---
+
+## 🏗 Architecture
+
+```
+Browser
+    │
+    ▼
+CodeIgniter 4
+    │
+Controllers
+    │
+Models
+    │
+MySQL Database
+```
+
+---
+
+## 🔒 Security
+
+- Authentication System
+- Session Management
+- MVC Architecture
+- Input Validation
+- CSRF Protection (CodeIgniter)
+
+---
+
+## 🚀 Future Improvements
+
+- Export PDF Reports
+- Export Excel
+- Email Notifications
+- Charts & Analytics
+- REST API
+- Role Based Access Control
+
+---
+
+## 👨‍💻 Author
+
+**Samuel Cristian Saragih**
+
+Software Engineer | Backend Developer | Machine Learning Enthusiast
+
+GitHub:
+https://github.com/Sctian514
+
+LinkedIn:
+(Add your LinkedIn URL)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
