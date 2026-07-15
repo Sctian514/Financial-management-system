@@ -220,17 +220,10 @@ MySQL Database
 
 ## 👨‍💻 Author
 
-**Samuel Cristian Saragih**
+**Samuel Cristian Saragih | Yous Markus Sibarani | Aldi Azhari Pulunggan **
 
 Software Engineer | Backend Developer | Machine Learning Enthusiast
 
-GitHub:
-https://github.com/Sctian514
-
-LinkedIn:
-(Add your LinkedIn URL)
-
----
 
 ## 📄 License
 
