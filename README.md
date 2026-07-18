@@ -1,4 +1,4 @@
-<img width="830" height="478" alt="image" src="https://github.com/user-attachments/assets/b0dd4c8b-d133-4579-b799-251817fa902c" /># 💰 Financial Management System
+># 💰 Financial Management System
 
 > A web-based Financial Management System developed during my internship to simplify financial recording, budget management, and reporting processes.
 
