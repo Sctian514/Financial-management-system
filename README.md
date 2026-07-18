@@ -1,4 +1,4 @@
-# 💰 Financial Management System
+<img width="830" height="478" alt="image" src="https://github.com/user-attachments/assets/b0dd4c8b-d133-4579-b799-251817fa902c" /># 💰 Financial Management System
 
 > A web-based Financial Management System developed during my internship to simplify financial recording, budget management, and reporting processes.
 
@@ -67,7 +67,7 @@ Financial-management-system/
 
 ### Login Page
 
-> *(Add screenshot here)*
+<img width="830" height="478" alt="image" src="https://github.com/user-attachments/assets/a5d0e3ab-d406-4022-96bd-bf5ca30b9b78" />
 
 ```
 docs/login.png
@@ -75,23 +75,12 @@ docs/login.png
 
 ---
 
-### Dashboard
-
-> *(Add screenshot here)*
+### Dashboard && Financial Records
 
 ```
-docs/dashboard.png
-```
-
----
-
-### Financial Records
-
-> *(Add screenshot here)*
 
 ```
-docs/transaction.png
-```
+<img width="878" height="493" alt="image" src="https://github.com/user-attachments/assets/c46f65f6-55dc-44bd-bc87-029e5229ef19" />
 
 ---
 
